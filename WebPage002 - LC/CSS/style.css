@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+article, aside, footer, header, main, nav, section {
+	display: block;
+}
+
+html, body,h1, h2, h3, ul, li, a, p, article, aside, footer, header, main, nav, section {
+	padding: 0;
+	margin: 0;
+}
+
+.banner {
+	background-color: #11232b;
+	color: white;
+	border: thin solid white;
+	height: 50px;
+	padding: 10px;
+	text-align: center;
+}
+
+body {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #f0fff0;
+	font-family: Helvetica;
+	border: thin solid black;
+}
+.payable {
+	line-height: 50px;
+	font-size: x-large;
+	font-weight: bold;
+}
+
+#Text1 {
+	border: thin solid black;
+	height: 25px;
+	font-size: large;
+	color: red;
+}
+
+#Text2 {
+	border: thin solid black;
+	height: 25px;
+	font-size: large;
+	color: red;
+}
+
+#txtresult {
+	height: 40px;
+	width: 200px;
+	border: thin solid black;
+	background-color: #0cc9b9;
+	color: blue;
+	font-size: x-large;
+	margin-top: 20px;
+	font-weight: bolder;
+	text-align: center;
+	text-decoration: underline;
+}
+
+.calc {
+	font-size: large;
+	font-weight: bold;
+}
+#reset {
+	font-size: large;
+	font-weight: bold;
+}
+
+#rate {
+	width: 80px;
+	height: 30px;
+	border: thin solid black;
+	background-color: #0cc9b9;
+	font-size: x-large;
+	margin-top: 20px;
+	text-align: center;
+	color: yellow;
+}
+
+form {
+	padding: 10px;
+	line-height: 30px;
+	background-color: beige;
+	height: 300px;
+	float: left;
+	width: 591px;
+}
+
+aside {
+	background-color: #008080;
+	color: white;
+	border: thin solid black;
+	padding: 5px;
+	font-size: small;
+	float: right;
+	height: 307px
+}
+
+.footer {
+	clear: both;
+	background-color: #ba6b10;
+	font-variant: small-caps;
+	font-weight: bold; 
+	height: 30px;
+	border: thin solid black;
+	padding-top: 10px;
+	padding-left: 5px;
+	
+}

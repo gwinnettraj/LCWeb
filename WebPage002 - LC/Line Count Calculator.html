@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+		<meta charset="UTF-8">
+		<title>Line Count Calculator</title>
+		
+		<script type="text/javascript">
+		
+		function compute(){
+            var Linecount = parseInt(document.getElementById("Text1").value);
+            var Accuracy = parseInt(document.getElementById("Text2").value);
+            if (Linecount <= 10000 && Accuracy >= 99) {
+				var rate = 2;
+			} else if (Linecount <= 10000 && Accuracy < 99 && Accuracy >= 95) {
+				var rate = 1;
+			} else if (Linecount > 10000 && Linecount <= 20000 && Accuracy >= 99) {
+				var rate = 3;	
+			} else if (Linecount > 20000 && Linecount <= 30000 && Accuracy >= 99) {
+				var rate = 4;
+			} else if (Linecount > 30000 && Accuracy >= 99) {
+				var rate = 5;
+			} else if (Linecount > 10000 && Linecount <= 20000 && Accuracy < 99 && Accuracy >= 95) {
+				var rate = 2;
+			}	else if (Linecount > 20000 && Linecount <= 30000 && Accuracy < 99 && Accuracy >= 95) {
+				var rate = 3;
+			}	else if (Linecount > 30000 && Accuracy < 99 && Accuracy >= 95) {
+				var rate = 4;
+			}	
+				else {
+				var rate = 0.5;
+			}	
+			
+			var result = Linecount * rate
+			
+			document.getElementById("txtresult").value = result;
+			document.getElementById("rate").value = rate;	
+            }
+	</script>	
+	
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+	</head>
+
+	<body>
+		<header class="banner">
+			<h1>Line Count Calculator</h1>
+		</header>
+		
+		<form>
+			<strong>Line Count :</strong> <br>
+            <input type="text" id="Text1" name="TextBox1" placeholder="Enter Linecount" required>
+            <br>
+            <strong>Accuracy :</strong> <br>
+            <input type="text" id="Text2" name="TextBox2" placeholder="Enter Accuracy">
+            <br>
+			<input type="button" class="calc" name="clickbtn" value="Calculate" onclick="compute()">
+			<strong>@</strong>
+			<input type="text" id="rate" name:"TextBox4">
+			<br>
+			
+		   <strong>Payable Amount :</strong>
+            <input type="text" id="txtresult" name="TextBox3"><br>
+            <input type="reset" id="reset" value="CLEAR">
+				
+				
+			</form>
+		
+		<aside>
+		<p class="aside">
+		<strong><u>PAYMENT TERMS:</u></strong><br><br>
+		<strong><u>Accuracy 99 and Above:</u></strong><br>
+		Line count from 0 to 10,000, rate = Rs. 2.00 per line.<br>
+		Line count from 10,001 to 20,000, rate = Rs. 3.00 per line.<br>
+		Line count from 20,001 to 30,000, rate = Rs. 4.00 per line.<br>
+		Line count 30,001 and above, rate = Rs. 5.00 per line.<br><br>
+				
+		<strong><u>Accuracy 95 to 98.9:</u></strong><br>
+		Line count from 0 to 10,000, rate = Rs. 1.00 per line.<br>
+		Line count from 10,001 to 20,000, rate = Rs. 2.00 per line.<br>
+		Line count from 20,001 to 30,000, rate = Rs. 3.00 per line.<br>
+		Line count 30,001 and above, rate = Rs. 4.00 per line.<br><br>
+		
+		<strong><u>Accuracy Below 95:</u></strong><br>
+		Flat rate = Rs. 0.50 per line.<br>
+		</p>
+		
+		</aside>
+		
+		<footer class="footer">
+		Disclaimer: The payment terms are subject to change and is up to the discretion of the management.
+		</footer>
+		
+	</body>
+</html>
